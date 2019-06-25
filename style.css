@@ -1,0 +1,230 @@
+*{
+	font-family: 'Montserrat', serif;
+}
+::-webkit-scrollbar {
+    width: 10px;
+}
+ 
+::-webkit-scrollbar-track {
+    background: #fff;
+}
+ 
+::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  border-radius: 10px;
+}
+.quesAccord{
+	max-height: 65vh;
+	overflow: auto;
+	padding: 0.5rem;
+	border-radius: 5px;
+}
+.quesBodyCon{
+	padding: 2rem 0;
+}
+.topNumCon {
+	display: flex;
+	display: -webkit-flex;
+	justify-content: space-between;
+	position: sticky;
+	z-index: 1000;
+	top: 50px;
+	padding: 1rem 0.75rem;
+	border-radius: 5px;
+	background: linear-gradient(-41deg,#5e92c4,#3476b5);
+	background: -webkit-linear-gradient(-41deg,#5e92c4,#3476b5);
+	background: -moz-linear-gradient(-41deg,#5e92c4,#3476b5);
+	background: -o-linear-gradient(-41deg,#5e92c4,#3476b5);
+	box-shadow: 3px 6px 20px rgba(0, 0, 0, .2);
+}
+.topNumCon .numLine{
+	width: 12.5%;
+	position: relative;
+}
+.topNumCon .numLine:first-child, .topNumCon .numLine:last-child{
+	width: 6.75%;
+}
+.numCon {
+	width: 35px;
+	cursor: pointer;
+	height: 35px;
+	background: #eaeaea;
+	text-align: center;
+	align-items: center;
+	z-index: 5;
+	color: #000;
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	position: relative;
+}
+.numLine.active .numCon {
+	background: #8BC34A;
+	color: #fff;
+	position: relative;
+}
+.line {
+	width: 100%;
+	position: absolute;
+	height: 2px;
+	background: #eaeaea;
+	top: 18px;
+}
+.numLine.active .line {
+	background: #8BC34A;
+	height: 4px;
+	top: 17px;
+}
+
+/* RADIONBUTTONS CSS */
+
+.radioContainer, .checkContainer {
+	display: block;
+	position: relative;
+	padding-left: 35px;
+	margin-bottom: 1.2rem;
+	cursor: pointer;
+	font-size: 1rem;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.radioContainer input {
+	position: absolute;
+	opacity: 0;
+	cursor: pointer;
+}
+
+/* Create a custom radio button */
+.checkmark {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 25px;
+	width: 25px;
+	background-color: #eee;
+	border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.radioContainer:hover input ~ .checkmark {
+	background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background */
+.radioContainer input:checked ~ .checkmark {
+	background-color: #202aa0;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark::after {
+	content: "";
+	position: absolute;
+	display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.radioContainer input:checked ~ .checkmark::after {
+	display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.radioContainer .checkmark::after {
+	top: 9px;
+	left: 9px;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: white;
+}
+/* RADION BUTTON CSS ENDS */
+/* CHECKBOX */
+/* Hide the browser's default checkbox */
+.checkContainer input {
+	position: absolute;
+	opacity: 0;
+	cursor: pointer;
+	height: 0;
+	width: 0;
+}
+
+/* Create a custom checkbox */
+.checkBox {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 25px;
+	width: 25px;
+	background-color: #eee;
+}
+
+/* On mouse-over, add a grey background color */
+.checkContainer:hover input ~ .checkBox {
+	background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.checkContainer input:checked ~ .checkBox {
+	background-color: #202aa0;
+}
+
+/* Create the checkBox/indicator (hidden when not checked) */
+.checkBox::after {
+	content: "";
+	position: absolute;
+	display: none;
+}
+
+/* Show the checkBox when checked */
+.checkContainer input:checked ~ .checkBox::after {
+	display: block;
+}
+
+/* Style the checkBox/indicator */
+.checkContainer .checkBox::after {
+	left: 9px;
+	top: 5px;
+	width: 5px;
+	height: 10px;
+	border: solid white;
+	border-width: 0 3px 3px 0;
+	-webkit-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	transform: rotate(45deg);
+}
+/* CHECKBOX */
+.quesAccord .card {
+	border: none;
+	color: #8c8c8c;
+	box-shadow: 3px 5px 20px rgba(0,0,0,0.1);
+}
+.quesAccord .card .card-header .card-link{
+	cursor: pointer;
+}
+.quesAccord .card .card-header {
+	background: #fff;
+	border-bottom: 0;
+}
+input.inputText {
+	width: 100%;
+	border: none;
+	border-bottom: 2px solid #202aa0;
+	outline: none;
+	padding: 0.5rem;
+}
+button.nextBtn {
+	padding: 0.5rem;
+	width: 100px;
+	border-radius: 25px;
+	border: none;
+	background: linear-gradient(50deg, rgb(32, 42, 160), rgba(32, 42, 160, .71));
+	color: #fff;
+	box-shadow: 1px 7px 20px rgba(0, 0, 0, 0.2);
+	outline: none;
+}
+.custom-control-label{
+	cursor: pointer;
+}
